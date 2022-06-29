@@ -5,7 +5,7 @@ import com.google.gson.Gson
 import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
-import org.junit.Assert
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.mockito.MockitoAnnotations
@@ -37,8 +37,8 @@ class RetrofitTest {
             mockWebServer.enqueue(mockResponse.setBody("[]"))
             val response = retrofitService.getUsersListData()
             val request = mockWebServer.takeRequest()
-            Assert.assertEquals("/v1/cbd40712-ed28-44b4-9987-231d11974809", request.path)
-            Assert.assertEquals(true, response.body()?.isEmpty() == true)
+            assertEquals("/v1/cbd40712-ed28-44b4-9987-231d11974809", request.path)
+            assertEquals(true, response.body()?.isEmpty() == true)
         }
     }
 }

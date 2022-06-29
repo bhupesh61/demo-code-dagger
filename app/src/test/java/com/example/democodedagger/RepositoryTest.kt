@@ -4,7 +4,7 @@ import com.example.democodedagger.models.UsersDataModel
 import com.example.democodedagger.repository.Repository
 import com.example.democodedagger.retrofit.RetrofitService
 import kotlinx.coroutines.runBlocking
-import org.junit.Assert
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -45,7 +45,7 @@ class RepositoryTest {
                 .thenReturn(Response.success(userDataModel))
 
             val response = repository.getUsersListData()
-            Assert.assertEquals(userDataModel, response.body())
+            assertEquals(userDataModel, response.body())
         }
     }
 

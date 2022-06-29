@@ -1,6 +1,5 @@
 package com.example.democodedagger
 
-import android.graphics.Movie
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.democodedagger.models.UsersDataModel
 import com.example.democodedagger.repository.Repository
@@ -10,9 +9,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.TestCoroutineDispatcher
-
 import kotlinx.coroutines.test.setMain
-import org.junit.Assert
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
